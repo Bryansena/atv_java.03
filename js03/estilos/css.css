@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+:root {
+    --cor-fonte-principal: goldenrod;
+    --cor-fonte-secundaria: sienna;
+    --cor-fundo-principal: tan;
+    --cor-fundo-secundaria: lightyellow;    
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela', sans-serif;
+    font-weight: bold;
+    font-size: 2.5vw;
+    text-align: center;
+    color: var(--cor-fonte-principal);
+    background-color: var(--cor-fundo-principal);
+}
+img {     
+    width: 100%;
+}
+header {
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-secundaria);
+    border-bottom: 3px ridge var(--cor-fonte-principal);
+    font-size: 4vw;
+    z-index: 1;
+}
+main {    
+    top: 4rem; 
+    position: absolute;
+    width: 100%;
+}
+.container {
+    width: 90%;
+    margin: 1rem auto;
+    display: grid;       
+    grid-template-columns: 1fr;	
+    gap: 3rem;  
+    padding: 30px 0px;
+    align-items: center;
+    color: var(--cor-fonte-secundaria);
+    background-color: var(--cor-fundo-secundaria);  
+}
+table {
+    width: 90%;
+    margin: auto; 
+}
+td {       
+    border: 1px dashed var(--cor-fonte-principal);
+    cursor: pointer;
+}
+caption {
+    color: var(--cor-fonte-principal);
+}	
+#det_carro {
+    width: 95%; 
+    height: 70vw; 
+    margin: auto;
+    border-radius: 5%;
+    border: 3px solid var(--cor-fonte-principal);
+    padding: 20px;
+    box-sizing: border-box;
+}	
+#det_carro img {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+#cards { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: auto; 
+}
+.item_seta {
+    width: 10%;
+    cursor: pointer;
+}
+.item_card_destaque {
+    width: 80%;  
+    height: 70vw; 
+    border-radius: 5%;
+    border: 3px solid var(--cor-fonte-principal);
+}
+.item_card_destaque img {    
+    border-radius: 5%;
+}
+#titulo_card {     
+    margin: 5px auto;
+} 
+#cards p {
+    margin: 1.25vw auto; 
+    padding: 1.25vw;
+}
+#p_link_card {
+    text-align: right;
+}
+#link_card {
+    padding: 7px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--cor-fundo-secundaria);
+    background-color: var(--cor-fundo-principal); 
+    box-sizing: border-box;
+}
+#busca {    
+    color: var(--cor-fonte-principal);
+}
+#busca p {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#img_buscar, #img_limpar {
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+input, select {
+    font-family: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-fonte-secundaria);
+    border-color: var(--cor-fonte-principal);   
+    width: 80%;
+}
+
+@media (min-width: 768px) {  
+    html, body {
+        font-size: 0.85vw;
+    } 
+    header{
+        font-size: 2vw;
+    }  
+    .container {   
+        height: 60vh;
+        margin: 2rem auto;
+        gap: 0.5rem;  
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #det_carro {
+        height: 20vw;
+    }    
+    #cards p {
+        margin: 0.15vw auto; 
+        padding: 0.65vw;
+    }
+    .item_card_destaque {
+       height: 20vw;  
+    }    
+    option {
+        font-size: 1vw;
+    }    
+}
